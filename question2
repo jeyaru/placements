@@ -33,3 +33,24 @@ arr:1 8 0 2 3 5 6
 Sample Output
 
 8
+
+code:-
+-----
+length = int(input())
+arr = list(map(int, input().split()))
+even_array = []
+odd_array = []
+for i in range(length):
+    if i % 2 == 0:
+        even_array.append(arr[i])
+    else:
+        odd_array.append(arr[i])
+even_array = sorted(even_array)
+odd_array = sorted(odd_array)
+print(even_array[len(even_array)-2] + odd_array[len(odd_array)-2])
+
+output:-
+------
+7 
+1 0 2 4 6 7 8
+10
