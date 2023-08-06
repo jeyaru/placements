@@ -1,0 +1,57 @@
+*Day 1 (Basic Level):*
+1. Write a program to print "Hello, World!" in your preferred programming language.
+2. Write a program to find the sum of two numbers.
+3. Write a program to check if a number is even or odd.
+4. Write a program to calculate the factorial of a given number.
+5. Write a program to reverse a string.
+
+code:-
+-----
+
+1.print("Hello World!")
+Hello World!
+
+2.a=int(input())
+b=int(input())
+sum=a+b
+print(sum)
+
+5
+6
+11
+
+3.a=int(input())
+if a%2==0:
+    print("even")
+else:
+    print("odd")
+
+5
+odd
+
+
+4.def factorial(n):
+    if n==0:
+        return 1
+    else:
+        return n*factorial(n-1)
+
+if __name__=="__main__":
+    n=int(input())
+    print(factorial(n))
+ 5 
+120 
+
+
+5.def reverse1(str1):
+    return str1[::-1]
+
+
+if __name__=="__main__":
+    str1=input()
+    print(reverse1(str1))
+
+hello
+olleh
+
+
