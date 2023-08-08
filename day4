@@ -1,0 +1,66 @@
+1.Write a program to implement a binary search algorithm.
+2. Write a program to find the GCD (Greatest Common Divisor) of two numbers.
+3. Write a program to find the Fibonacci sequence up to a given number.
+4. Write a program to check if a number is a prime number.
+5. Write a program to implement a stack data structure.
+
+1.
+code:
+---
+def binary(array,target):
+    left=0
+    right=len(array)-1
+    while(left<=right):
+        mid=(left+(right-left))//2
+        if array[mid]==target:
+            return mid
+        elif array[mid]<target:
+            left=mid+1
+        else:
+            right=mid-1
+    return -1
+array=list(map(int,input().split()))
+target=int(input())
+result=binary(array,target)
+if(result!=-1):
+    print("element not found")
+else:
+    print("element found")
+output:
+------
+5 8 9 0 2 4 
+4
+element found
+
+2.
+def gcd(a,b):
+    while b:
+        a,b=b,a%b
+    return a
+
+
+a=int(input())
+b=int(input())
+result=gcd(a,b)
+print(f"result is {result}")
+
+output
+------
+48
+18
+6 
+
+3.
+def fibonnaci(n):
+    sequence=[0,1]
+    while sequence[-1]+sequence[-2]<=n:
+        next_lib=sequence[-1]+sequence[-2]
+        sequence.append(next_lib)
+    print(sequence)
+        
+n=int(input())
+fibonnaci(n)
+output:
+-------
+10 
+[0, 1, 1, 2, 3, 5, 8]
